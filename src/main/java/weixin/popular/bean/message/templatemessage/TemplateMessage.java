@@ -3,6 +3,10 @@ package weixin.popular.bean.message.templatemessage;
 import java.util.LinkedHashMap;
 
 public class TemplateMessage {
+	/**
+	 * 统一服务消息时使用
+ 	 */
+	private String appId;
 
 	private String touser;
 
@@ -16,6 +20,14 @@ public class TemplateMessage {
 	private String url;
 
 	private LinkedHashMap<String, TemplateMessageItem> data;
+
+	public String getAppId() {
+		return appId;
+	}
+
+	public void setAppId(String appId) {
+		this.appId = appId;
+	}
 
 	public String getTouser() {
 		return touser;
@@ -56,4 +68,5 @@ public class TemplateMessage {
 	public void setMiniprogram(TemplateMessageMiniProgram miniprogram) {
 		this.miniprogram = miniprogram;
 	}
+
 }
